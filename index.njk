@@ -1,0 +1,16 @@
+---
+layout: base
+---
+
+<body class="homepage">
+
+<h2>You will want to remember this...</h2>
+
+<ul>
+{% for post in collections.posts %}
+  <li>
+    <a href="{{ post.url }}">{{ post.data.title }}</a><br>
+    <small>{{ post.date }}</small>
+  </li>
+{% endfor %}
+</ul>
